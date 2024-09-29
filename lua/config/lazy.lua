@@ -25,4 +25,5 @@ require('lazy').setup {
   --install = { colorscheme = { "habamax" } },
   checker = { enabled = false },
 }
-require 'colors.256_noir'
+
+vim.cmd 'colorscheme cinnabar'
