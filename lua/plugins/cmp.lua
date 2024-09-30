@@ -31,7 +31,7 @@ return {
           if cmp.visible() then
             cmp.select_next_item()
           elseif luasnip.expand_or_jumpable() then
-            luasnip.expand_or_jumpable()
+            luasnip.expand_or_jump()
           else
             fallback()
           end
