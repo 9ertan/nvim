@@ -7,7 +7,7 @@ local opts = {
 
 -- Neovim Bindings
 -- Map leader
-vim.g.mapleader = ' '
+vim.g.mapleader = '\\'
 -- Bind arrow keys to window adjust. Use hjkl
 map('n', '<Up>', ':resize +2<CR>', opts)
 map('n', '<Down>', ':resize -2<CR>', opts)
@@ -22,8 +22,6 @@ map('i', 'jk', '<Esc>') -- Map Esc to jk. Wayy faster.
 map({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and Clear hlsearch' }) -- Clear search highlighting.
 -- New file
 map('n', '<leader>fn', '<cmd>enew<cr>')
-map('n', '<Leader>h', '0', opts)
-map('n', '<Leader>l', '$', opts)
 -- Split
 map('n', '<C-d>', ':vsplit<CR>') -- Vertical split with Ctrl+d
 map('n', '<C-s>', ':split<CR>') -- Horizontal Split with Ctrl+s
