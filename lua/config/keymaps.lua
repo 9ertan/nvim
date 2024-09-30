@@ -22,6 +22,9 @@ map('i', 'jk', '<Esc>') -- Map Esc to jk. Wayy faster.
 map({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and Clear hlsearch' }) -- Clear search highlighting.
 -- New file
 map('n', '<leader>fn', '<cmd>enew<cr>')
+-- Jump
+map('n', '<Leader>c', '^', opts)
+map('n', '<Leader>v', '$', opts)
 -- Split
 map('n', '<C-d>', ':vsplit<CR>') -- Vertical split with Ctrl+d
 map('n', '<C-s>', ':split<CR>') -- Horizontal Split with Ctrl+s
