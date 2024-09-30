@@ -1,13 +1,4 @@
-local function map(mode, lhs, rhs, opts)
-  local options = {
-    noremap = true,
-    silent = true,
-  }
-  if opts then
-    options = vim.tbl_extend('force', options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
+local map = vim.keymap.set
 
 local opts = {
   noremap = true,
@@ -22,12 +13,15 @@ map('n', '<Up>', ':resize +2<CR>', opts)
 map('n', '<Down>', ':resize -2<CR>', opts)
 map('n', '<Left>', ':vertical resize +2<CR>', opts)
 map('n', '<Right>', ':vertical resize -2<CR>', opts)
--- Insert Mode
+-- Lazyvim inspired keymaps
+map({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { desc = 'Down', expr = true, silent = true })
+map({ 'n', 'x' }, '<Down>', "v:count == 0 ? 'gj' : 'j'", { desc = 'Down', expr = true, silent = true })
+map({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = true, silent = true })
+map({ 'n', 'x' }, '<Up>', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = true, silent = true })
 map('i', 'jk', '<Esc>') -- Map Esc to jk. Wayy faster.
--- Normal Mode
-map('n', '<Leader>c', ':nohl<CR>') -- Clear search highlighting.
--- Jump to tab stop
-map('n', '<Tab>', 'v:lua.jump_to_next_tab_stop()', { expr = true, noremap = true, silent = true })
+map({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and Clear hlsearch' }) -- Clear search highlighting.
+-- New file
+map('n', '<leader>fn', '<cmd>enew<cr>')
 map('n', '<Leader>h', '0', opts)
 map('n', '<Leader>l', '$', opts)
 -- Split
@@ -63,3 +57,5 @@ map('n', '<Leader>fd', '<cmd>Telescope dap commands<CR>', opts)
 map('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', opts)
 -- Oil
 map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+-- Fugitive
+map('n', '<Leader>g', ':G<CR>', opts)
