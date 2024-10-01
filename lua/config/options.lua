@@ -24,6 +24,3 @@ local options = {
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
-
--- Disable neovim intro
-vim.opt.shortmess:append 'sI'
