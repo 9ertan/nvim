@@ -46,10 +46,6 @@ map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 
 -- Plugin(s) keymappings
--- Toggle Term
-map('n', '<Leader>tt', ':ToggleTerm<CR>', opts) -- Terminal open
--- Neogit
-map('n', '<Leader>ng', ':Neogit<CR>', opts) -- Neogit open
 -- Telescope
 map('n', '<Leader>ff', '<cmd>Telescope find_files<CR>', opts)
 map('n', '<Leader>fh', '<cmd>Telescope oldfiles<CR>', opts)
