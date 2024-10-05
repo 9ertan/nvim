@@ -44,13 +44,18 @@ return {
       }
 
       require('fidget').setup {}
+
+      vim.diagnostic.config {
+        float = {
+          style = 'minimal',
+          border = 'rounded',
+          header = '',
+          prefix = '',
+          source = true,
+          focusable = false,
+        },
+      }
     end,
   },
-  {
-    'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
-    config = function()
-      require('lsp_lines').setup {}
-      vim.diagnostic.config { virtual_text = false }
-    end,
-  },
+  {},
 }
