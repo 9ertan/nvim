@@ -15,7 +15,7 @@ local options = {
   tabstop = 2, -- Number of spaces a Tab in the text stands for
   lazyredraw = true, -- Faster scrolling
   updatetime = 300, -- Faster completion
-  wrap = false,
+  wrap = true,
   hidden = true,
   conceallevel = 1,
 }

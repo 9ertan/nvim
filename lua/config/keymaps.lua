@@ -18,7 +18,8 @@ map({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { desc = 'Down', expr = true
 map({ 'n', 'x' }, '<Down>', "v:count == 0 ? 'gj' : 'j'", { desc = 'Down', expr = true, silent = true })
 map({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = true, silent = true })
 map({ 'n', 'x' }, '<Up>', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = true, silent = true })
-map({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and Clear hlsearch' }) -- Clear search highlighting.
+-- Clear Search
+map('n', '<Leader>/', ':noh<CR>', { desc = 'Clear search highlighting' })
 -- New file
 map('n', '<leader>fn', '<cmd>enew<cr>')
 -- Jump
@@ -33,11 +34,6 @@ map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
--- Select all
-map('n', '<C-a>', 'ggvG', opts)
--- Delete without yank registering (might be counterintuitive)
-map('n', 'd', '"_d', opts)
-map('n', 'x', '"_x', opts)
 -- Navigate buffers fast
 map('n', '<S-l>', ':bnext<CR>', opts)
 map('n', '<S-h>', ':bprevious<CR>', opts)
@@ -45,10 +41,22 @@ map('n', '<S-h>', ':bprevious<CR>', opts)
 map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+-- Yank everything
+map('n', '<Leader>ya', 'ggVGy', { desc = 'Yank entire file' })
+-- Save file
+map('n', '<Leader>w', ':w<CR>', { desc = 'Save file' })
+-- Quit
+map('n', '<Leader>q', ':q<CR>', { desc = 'Quit' })
+-- Close buffer
+map('n', '<Leader>bd', ':bd<CR>', { desc = 'Close buffer' })
+-- Easier command mode
+map('n', ';', ':', { noremap = true })
+-- Format the entire file.
+map('n', '<Leader>ff', 'gg=G', { desc = 'Format entire file' })
 
 -- Plugin(s) keymappings
 -- Telescope
-map('n', '<Leader>ff', '<cmd>Telescope find_files<CR>', opts)
+map('n', '<Leader>sf', '<cmd>Telescope find_files<CR>', opts)
 map('n', '<Leader>fh', '<cmd>Telescope oldfiles<CR>', opts)
 map('n', '<Leader>fg', '<cmd>Telescope live_grep<CR>', opts)
 map('n', '<Leader>fd', '<cmd>Telescope dap commands<CR>', opts)
