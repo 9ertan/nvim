@@ -33,6 +33,8 @@ map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
+-- Select all
+map('n', '<C-a>', 'ggvG', opts)
 -- Delete without yank registering (might be counterintuitive)
 map('n', 'd', '"_d', opts)
 map('n', 'x', '"_x', opts)
