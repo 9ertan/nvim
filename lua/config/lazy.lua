@@ -26,4 +26,4 @@ require('lazy').setup {
   checker = { enabled = false },
 }
 
-vim.cmd 'colorscheme tokyonight'
+vim.cmd 'colorscheme hybrid'

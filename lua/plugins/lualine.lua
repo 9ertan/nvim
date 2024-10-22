@@ -19,7 +19,7 @@ return {
     require('lualine').setup {
       options = {
         icons_enabled = true,
-        theme = 'tokyonight', -- Choose a theme you like
+        theme = 'hybrid', -- Choose a theme you like
         component_separators = '',
         section_separators = '',
       },

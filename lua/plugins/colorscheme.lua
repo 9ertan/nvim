@@ -8,5 +8,10 @@ return {
       }
     end,
   },
-  {},
+  {
+    'HoNamDuong/hybrid.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 }

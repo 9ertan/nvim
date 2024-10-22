@@ -17,7 +17,7 @@ local options = {
   updatetime = 300, -- Faster completion
   wrap = true,
   hidden = true,
-  conceallevel = 1,
+  guicursor = 'n-v-c-i:block',
 }
 
 for k, v in pairs(options) do

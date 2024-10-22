@@ -7,7 +7,7 @@ local opts = {
 
 -- Neovim Bindings
 -- Map leader
-vim.g.mapleader = '\\'
+vim.g.mapleader = ' '
 -- Bind arrow keys to window adjust. Use hjkl
 map('n', '<Up>', ':resize +2<CR>', opts)
 map('n', '<Down>', ':resize -2<CR>', opts)
@@ -49,14 +49,12 @@ map('n', '<Leader>w', ':w<CR>', { desc = 'Save file' })
 map('n', '<Leader>q', ':q<CR>', { desc = 'Quit' })
 -- Close buffer
 map('n', '<Leader>bd', ':bd<CR>', { desc = 'Close buffer' })
--- Easier command mode
+-- Quicker command mode
 map('n', ';', ':', { noremap = true })
--- Format the entire file.
-map('n', '<Leader>ff', 'gg=G', { desc = 'Format entire file' })
 
 -- Plugin(s) keymappings
 -- Telescope
-map('n', '<Leader>sf', '<cmd>Telescope find_files<CR>', opts)
+map('n', '<Leader>ff', '<cmd>Telescope find_files<CR>', opts)
 map('n', '<Leader>fh', '<cmd>Telescope oldfiles<CR>', opts)
 map('n', '<Leader>fg', '<cmd>Telescope live_grep<CR>', opts)
 map('n', '<Leader>fd', '<cmd>Telescope dap commands<CR>', opts)
