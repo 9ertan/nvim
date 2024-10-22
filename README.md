@@ -1,4 +1,4 @@
-## Keymapping cheat sheet, generated using a llm.
+## Keymap cheat sheet, generated using a llm.
 
 | Mode      | Key Mapping         | Command / Description                              |
 |-----------|---------------------|---------------------------------------------------|
