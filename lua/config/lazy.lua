@@ -26,4 +26,4 @@ require('lazy').setup {
   checker = { enabled = false },
 }
 
-vim.cmd 'colorscheme hybrid'
+vim.cmd 'colorscheme kanagawabones'

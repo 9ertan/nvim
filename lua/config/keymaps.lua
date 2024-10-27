@@ -63,3 +63,5 @@ map('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', opts)
 map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 -- Fugitive
 map('n', '<Leader>g', ':G<CR>', opts)
+-- JSON parsing
+map('n', '<Leader>jj', ":%!jq '.'<CR>", opts)

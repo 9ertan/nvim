@@ -36,6 +36,7 @@
 | `<Leader>fb`      | N    | Telescope: Buffers                        | List and switch between open buffers               |
 | `-`               | N    | Oil: Open parent directory                | Navigate to parent directory using Oil             |
 | `<Leader>g`       | N    | Fugitive: Open Git status                 | Open Fugitive git status window                    |
+| `<Leader>jj`      | N    | Shell: JSON parsing                       | Run jq on current buffer                           |
 | `<C-Space>`       | I    | cmp: Complete                             | Trigger completion menu                            |
 | `<C-e>`           | I    | cmp: Abort                                | Close completion menu                              |
 | `<Tab>`           | I, S | cmp: Next item or expand snippet          | Select next completion item or expand snippet      |
