@@ -20,5 +20,12 @@ return {
     lazy = false,
     priority = 1000,
   },
-  {},
+  {
+    'blazkowolf/gruber-darker.nvim',
+    opts = {
+      italic = {
+        comments = false,
+      },
+    },
+  },
 }

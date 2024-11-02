@@ -65,3 +65,5 @@ map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 map('n', '<Leader>g', ':G<CR>', opts)
 -- JSON parsing
 map('n', '<Leader>jj', ":%!jq '.'<CR>", opts)
+-- Compile mode
+map('n', '<Leader>ce', ':below Compile<CR>', opts)

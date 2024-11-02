@@ -36,6 +36,13 @@ return {
             --   opts = vim.tbl_deep_extend('force', opts, require 'plugins.lsp.settings.gopls')
             -- end
 
+            -- I use the master branch of zig, managed using zvm.
+            -- ZLS breaks with mason, i install ZLS with zvm. which works.
+            -- TODO: Enable inlay hints.
+            lspconfig.zls.setup {
+              capabilities = capabilities,
+            }
+
             lspconfig[server_name].setup(opts)
           end,
         },

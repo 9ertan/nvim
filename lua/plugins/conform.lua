@@ -6,6 +6,9 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         go = { 'gofmt' },
+        javascript = { 'prettierd', 'prettier' },
+        typescript = { 'prettierd', 'prettier' },
+        typescriptreact = { 'prettierd', 'prettier' },
       },
       format_on_save = {
         lsp_fallback = true,
